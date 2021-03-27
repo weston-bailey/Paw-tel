@@ -27,7 +27,7 @@ if(process.env.NODE_ENV === 'development'){
     
     //mongo db atlas code here
     const MongoClient = require('mongodb').MongoClient;
-
+    console.log('connecting to atlas', '++++++++++++++++++++++++++++++++++++++++++')
     const uri = process.env.ATLAS_URI
 
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -36,7 +36,7 @@ if(process.env.NODE_ENV === 'development'){
     const collection = client.db("test").collection("devices");
     // perform actions on the collection object
     client.close();
-});
+    });
 
     // connect to orm
     mongoose.connect(uri, {

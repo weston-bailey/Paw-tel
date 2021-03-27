@@ -6,7 +6,7 @@ const cors = require('cors')
 
 
 require('dotenv').config()
-// require('./models')
+require('./models')
 
 // config express app
 const app = express()
